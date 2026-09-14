@@ -7,6 +7,7 @@
   <title>Portfolio for Tendai Mushayapokuvaka | Software Engineer</title>
 </head>
 <body>
+  <a href="#main-content">Skip to main content</a>
 
   <header>
     <h1>Tendai Mushayapokuvaka | Software Engineer</h1>
@@ -24,11 +25,11 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <article>
       <section id="about">
         <h2>About Me</h2>
-        <p>I'm a passionate software engineering student at Africa University. I have knowledge in backend and artificial intelligence integration.</p>
+        <p>I'm a software engineering student at Africa University, building backend systems and AI-integrated tools. I've also led marketing for a legal aid company and now for my university's student group &mdash; experience that shaped how I communicate and solve problems, not just how I code.</p>
 
         <aside aria-labelledby="focus-heading">
           <h3 id="focus-heading">Current focus</h3>
@@ -51,7 +52,7 @@
       </section>
 
       <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Recent Projects</h2>
+        <h2 id="projects-heading">Selected Projects</h2>
 
         <article>
           <h3>Student Online Course Registration System</h3>
@@ -87,15 +88,56 @@
         <p>Advanced Level Mathematics &ndash; high distinction in Pure Mathematics and Statistics</p>
       </section>
     </article>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact information</h2>
+
+      <nav aria-label="Social and contact links">
+        <a href="https://github.com/mushayapokuvakat-ai">GitHub</a>
+        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
+        <a href="mailto:mushayapokuvakat@africau.edu">Email</a>
+      </nav>
+
+      <h3>Send me a message</h3>
+      <form action="#" method="post">
+        <p>
+          <label for="name">Full name</label><br>
+          <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
+        </p>
+
+        <p>
+          <label for="email">Email address</label><br>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </p>
+
+        <p>
+          <label for="phone">Phone number</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9+\s]{7,15}" placeholder="e.g. +263 77 123 4567" autocomplete="tel">
+        </p>
+
+        <p>
+          <label for="reason">Reason for contact</label><br>
+          <select id="reason" name="reason" required>
+            <option value="">Please choose one</option>
+            <option value="collaboration">Collaboration / software work</option>
+            <option value="opportunity">Job or internship opportunity</option>
+            <option value="other">Other enquiry</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+        </p>
+
+        <p>
+          <button type="submit">Send message</button>
+        </p>
+      </form>
+    </section>
   </main>
 
-  <footer id="contact">
-    <h2>Contact information</h2>
-    <nav aria-label="Social and contact links">
-      <a href="https://github.com/mushayapokuvakat-ai">GitHub</a>
-      <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
-      <a href="mailto:mushayapokuvakat@africau.edu">Email</a>
-    </nav>
+  <footer>
     <p><small>&copy; 2026 Tendai Mushayapokuvaka</small></p>
   </footer>
 
