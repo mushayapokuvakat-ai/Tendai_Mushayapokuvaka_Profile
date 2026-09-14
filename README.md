@@ -24,3 +24,4 @@ Commit History
 1. `Add initial semantic HTML5 skeleton with About and Skills sections`
 2. `Expand structure: add Projects, Certifications, Education and full in-page navigation`
 3. `Add Contact Me form with native HTML5 validation and finalize accessibility`
+4. `Added a profile picture.`
