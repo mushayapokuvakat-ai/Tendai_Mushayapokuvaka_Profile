@@ -3,77 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Tendai Mushayapokuvaka, Software Engineer and Mathematics Tutor focused on full-stack systems, backend engineering, and AI integration.">
-  <title>Tendai Mushayapokuvaka | Software Engineer</title>
+  <meta name="description" content="Portfolio of Tendai Mushayapokuvaka, Software Engineer and Mathematics Tutor at Africa University.">
+  <title>Portfolio for Tendai Mushayapokuvaka | Software Engineer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN for utility-first sections -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0a192f',
+            darkNavy: '#020c1b',
+            lightNavy: '#112240',
+            lightestNavy: '#233554',
+            slate: '#8892b0',
+            lightSlate: '#a8b2d1',
+            lightestSlate: '#ccd6f6',
+            white: '#e6f1ff',
+            green: '#64ffda',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace'],
+            serif: ['"Times New Roman"', 'Times', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheet for base, mobile-first, and custom grid/flex layouts -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#0a192f] text-[#8892b0] font-sans antialiased selection:bg-[#233554] selection:text-[#ccd6f6]">
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-  <header>
-    <nav aria-label="Primary navigation">
-      <div class="logo"><a href="#">TM</a></div>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="nav-toggle">
-        <span class="hamburger-box">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </span>
-      </button>
-      <div class="nav-links-wrapper" id="nav-links-wrapper">
-        <ol>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ol>
-        <a href="mailto:mushayapokuvakat@africau.edu" class="button nav-cta">Get in Touch</a>
+  <!-- PART E: Tailwind-styled Header & Navigation with responsive variants (sm:, md:) -->
+  <header class="sticky top-0 z-50 bg-[#0a192f]/95 backdrop-blur-md border-b border-[#233554]/50 px-5 py-4 sm:px-8 md:px-12 md:py-5 flex flex-col md:flex-row items-center justify-between gap-4 transition-all">
+    <div class="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
+      <img src="images/image.png" alt="Portrait photo of Tendai Mushayapokuvaka" width="150" height="150" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#64ffda] object-cover shadow-md">
+      <div>
+        <h1 class="text-xl sm:text-2xl font-serif font-bold text-[#ccd6f6] tracking-wide">Tendai Mushayapokuvaka</h1>
+        <p class="text-xs sm:text-sm text-[#8892b0]">Software Engineering Student &amp; Math Tutor</p>
       </div>
+    </div>
+
+    <nav aria-label="Primary navigation" class="w-full md:w-auto">
+      <ul class="flex flex-wrap justify-center md:justify-end items-center gap-3 sm:gap-5 text-xs sm:text-sm font-mono text-[#8892b0] list-none m-0 p-0">
+        <li><a href="#about" class="hover:text-[#64ffda] transition-colors py-1 px-2">01. About</a></li>
+        <li><a href="#skills" class="hover:text-[#64ffda] transition-colors py-1 px-2">02. Skills</a></li>
+        <li><a href="#projects" class="hover:text-[#64ffda] transition-colors py-1 px-2">03. Projects</a></li>
+        <li><a href="#certifications" class="hover:text-[#64ffda] transition-colors py-1 px-2">04. Certifications</a></li>
+        <li><a href="#education" class="hover:text-[#64ffda] transition-colors py-1 px-2">05. Education</a></li>
+        <li><a href="#contact" class="hover:text-[#64ffda] transition-colors py-1 px-2">06. Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main id="main-content">
-    <section id="hero">
-      <img src="images/image.png" alt="Portrait photo of Tendai Mushayapokuvaka" class="profile-photo">
-      <p class="subtitle">Hi, my name is</p>
-      <h1 class="big-heading hero-name">Tendai Mushayapokuvaka.</h1>
-      <p>I'm a software engineering student at Africa University currently focused on backend development and AI integration. I enjoy building robust systems and intelligent applications.</p>
-      <div style="margin-top: 25px;">
-        <a href="#projects" class="button big-button">Check out my projects!</a>
-      </div>
-    </section>
-
     <article>
+      <!-- About Section -->
       <section id="about">
         <h2 class="numbered-heading">About Me</h2>
-        <p>Software Engineer and Mathematics Tutor with 5+ years building clean, scalable solutions and making complex concepts click.</p>
+        <p class="lead-text">Software Engineer and Mathematics Tutor with 5+ years building clean, scalable solutions and making complex concepts click.</p>
         
         <p>I have spent half my career in classrooms and half in codebases:</p>
 
         <div class="about-grid">
           <div class="about-card">
-            <h3 class="subtitle">Engineering Side</h3>
-            <p>I design and ship full-stack applications using Python, JavaScript, React, Node.js, SQL, and Git. I’m strong in data structures &amp; algorithms, API design, cloud deployment (AWS), testing, and debugging performance bottlenecks.</p>
+            <h3 class="card-subtitle">Engineering Side</h3>
+            <p>I design and ship full-stack applications using Python, JavaScript, React, Node.js, SQL, and Git. Strong in data structures &amp; algorithms, API design, AWS cloud deployment, testing, and debugging performance bottlenecks.</p>
           </div>
 
           <div class="about-card">
-            <h3 class="subtitle">Tutoring Side</h3>
+            <h3 class="card-subtitle">Tutoring Side</h3>
             <p>2 years at a formal institution + 3 years freelance teaching General &amp; Pure Mathematics (ZIMSEC syllabus).</p>
           </div>
         </div>
 
-        <p style="margin-top: 25px;">I'm currently pursuing my degree in Software Engineering at Africa University, building backend systems and AI-integrated tools. I've also led marketing for a legal aid company and now for my university's student group &mdash; experience that shaped how I communicate and solve problems, not just how I code.</p>
+        <p>I'm currently pursuing my degree in Software Engineering at Africa University, building backend systems and AI-integrated tools. I've also led marketing for a legal aid company and now for my university's student group &mdash; experience that shaped how I communicate and solve problems, not just how I code.</p>
 
-        <p class="subtitle" style="margin-top: 30px; margin-bottom: 12px;">Current focus:</p>
-        <ul class="fancy-list">
-          <li>Backend systems &amp; databases</li>
-          <li>AI-enabled web applications</li>
-          <li>Scalable API architectures</li>
-          <li>Cloud deployments</li>
-        </ul>
+        <aside aria-labelledby="focus-heading" class="focus-aside">
+          <h3 id="focus-heading">Current focus</h3>
+          <ul class="fancy-list">
+            <li>Backend systems and databases</li>
+            <li>AI-enabled web applications</li>
+            <li>Scalable API architectures</li>
+            <li>Cloud deployments</li>
+          </ul>
+        </aside>
       </section>
 
+      <!-- Skills Section -->
       <section id="skills">
         <h2 class="numbered-heading">Skills</h2>
         <div class="skills-grid">
@@ -112,37 +139,34 @@
         </div>
       </section>
 
+      <!-- Projects Section -->
       <section id="projects" aria-labelledby="projects-heading">
         <h2 id="projects-heading" class="numbered-heading">Selected Projects</h2>
 
-        <div class="project-card">
-          <h3>Student Online Course Registration System</h3>
-          <p>A system that enables students to register for courses electronically through a website or application.</p>
-          <a href="https://onlineregistration-2.onrender.com" target="_blank" rel="noopener" class="inline-link">Visit the project</a>
-        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Student Online Course Registration System</h3>
+            <p>A system that enables students to register for courses electronically through a website or application.</p>
+            <p><a href="https://onlineregistration-2.onrender.com" target="_blank" rel="noopener" class="project-link">Visit the project &rarr;</a></p>
+          </article>
 
-        <div class="project-card">
-          <h3>Budget Tracker</h3>
-          <p>A web application for tracking and managing a personal budget.</p>
-          <a href="https://budget-tracker-f.vercel.app/" target="_blank" rel="noopener" class="inline-link">Visit the project</a>
-        </div>
+          <article class="project-card">
+            <h3>Budget Tracker</h3>
+            <p>A web application for tracking and managing a personal budget.</p>
+            <p><a href="https://budget-tracker-f.vercel.app/" target="_blank" rel="noopener" class="project-link">Visit the project &rarr;</a></p>
+          </article>
 
-        <div class="project-card">
-          <h3>Code Health AI</h3>
-          <p>A health-screening platform with an artificial-intelligence layer.</p>
-          <a href="https://code-health-ai-front-1u29.vercel.app/" target="_blank" rel="noopener" class="inline-link">Visit the project</a>
+          <article class="project-card">
+            <h3>Code Health AI</h3>
+            <p>A health-screening platform with an artificial-intelligence layer.</p>
+            <p><a href="https://code-health-ai-front-1u29.vercel.app/" target="_blank" rel="noopener" class="project-link">Visit the project &rarr;</a></p>
+          </article>
         </div>
       </section>
 
+      <!-- Certifications Section -->
       <section id="certifications" aria-labelledby="certifications-heading">
-        <h2 id="certifications-heading" class="numbered-heading">Certifications &amp; Education</h2>
-        <p class="subtitle" style="margin-bottom: 5px;">BSc Software Engineering</p>
-        <p>Africa University &ndash; current student</p>
-        
-        <p class="subtitle" style="margin-top: 20px; margin-bottom: 5px;">Advanced Level Mathematics</p>
-        <p>High distinction in Pure Mathematics and Statistics</p>
-
-        <br>
+        <h2 id="certifications-heading" class="numbered-heading">Certifications and Training</h2>
         <ul class="fancy-list certifications-list">
           <li>
             <a href="https://www.freecodecamp.org/certification/tendaijmushayapokuvaka13/python-v9" target="_blank" rel="noopener" class="inline-link">
@@ -158,76 +182,87 @@
             Meta Back-End Developer Certificate &ndash; Meta (<time datetime="2025-03">March 2025</time>)
           </li>
           <li>
-            Backend Dev: Django REST &amp; PostgreSQL &ndash; CODEALPHA (<time datetime="2026-06">June 2026</time>)
+            Backend Development: Django REST Framework and PostgreSQL &ndash; CODEALPHA (<time datetime="2026-06">June 2026</time>)
           </li>
         </ul>
       </section>
+
+      <!-- Education Section -->
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading" class="numbered-heading">Education</h2>
+        <div class="education-block">
+          <p class="education-degree">BSc Software Engineering</p>
+          <p class="education-school">Africa University &ndash; current student</p>
+        </div>
+        <div class="education-block">
+          <p class="education-degree">Advanced Level Mathematics</p>
+          <p class="education-school">High distinction in Pure Mathematics and Statistics</p>
+        </div>
+      </section>
     </article>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" class="numbered-heading">What's Next?</h2>
-      <h2 class="big-heading slate" style="font-size: clamp(28px, 5vw, 48px); margin-bottom: 18px;">Get In Touch</h2>
-      <p style="margin-bottom: 20px;">I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+    <!-- PART E: Tailwind-styled Contact Section & Form with responsive variants (sm:, md:) -->
+    <section id="contact" aria-labelledby="contact-heading" class="pt-16 pb-20 max-w-2xl mx-auto px-4 sm:px-6">
+      <h2 id="contact-heading" class="text-2xl sm:text-3xl font-bold text-[#ccd6f6] mb-3 text-center">Contact Information</h2>
+      <p class="text-center text-sm sm:text-base text-[#8892b0] mb-6">Have an opportunity, collaboration, or question? Feel free to reach out directly.</p>
 
-      <p style="margin-bottom: 25px;">
-        <a href="mailto:mushayapokuvakat@africau.edu" class="inline-link contact-email">
-          mushayapokuvakat@africau.edu
+      <nav aria-label="Social and contact links" class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-8 text-xs sm:text-sm font-mono">
+        <a href="https://github.com/mushayapokuvakat-ai" class="text-[#64ffda] hover:underline" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="text-[#64ffda] hover:underline" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:mushayapokuvakat@africau.edu" class="text-[#64ffda] hover:underline">Email</a>
+        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-[#64ffda] hover:underline">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp (+263 787449535)
         </a>
-      </p>
-
-      <div class="contact-buttons-wrapper">
-        <a href="mailto:mushayapokuvakat@africau.edu" class="button big-button">Say Hello</a>
-        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="button big-button whatsapp-button">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-          </svg>
-          Chat on WhatsApp
-        </a>
-      </div>
-
-      <nav aria-label="Social and contact links" class="contact-social-links">
-        <a href="https://github.com/mushayapokuvakat-ai" class="inline-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="inline-link">LinkedIn</a>
-        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="inline-link">WhatsApp (+263 787449535)</a>
       </nav>
+
+      <h3 class="text-lg sm:text-xl font-bold text-[#ccd6f6] mb-5 text-center">Send me a message</h3>
+      
+      <form action="#" method="post" class="bg-[#112240] p-6 sm:p-8 rounded-lg shadow-xl border border-[#233554]/60 space-y-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <p class="m-0">
+            <label for="name" class="block text-xs font-mono text-[#64ffda] mb-1.5">Full name</label>
+            <input type="text" id="name" name="name" required minlength="2" autocomplete="name" class="w-full bg-[#0a192f] border border-[#233554] rounded p-2.5 text-sm text-[#e6f1ff] focus:outline-none focus:border-[#64ffda] transition-colors">
+          </p>
+
+          <p class="m-0">
+            <label for="email" class="block text-xs font-mono text-[#64ffda] mb-1.5">Email address</label>
+            <input type="email" id="email" name="email" required autocomplete="email" class="w-full bg-[#0a192f] border border-[#233554] rounded p-2.5 text-sm text-[#e6f1ff] focus:outline-none focus:border-[#64ffda] transition-colors">
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <p class="m-0">
+            <label for="phone" class="block text-xs font-mono text-[#64ffda] mb-1.5">Phone number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9+\s]{7,15}" placeholder="e.g. +263 77 123 4567" autocomplete="tel" class="w-full bg-[#0a192f] border border-[#233554] rounded p-2.5 text-sm text-[#e6f1ff] focus:outline-none focus:border-[#64ffda] transition-colors">
+          </p>
+
+          <p class="m-0">
+            <label for="reason" class="block text-xs font-mono text-[#64ffda] mb-1.5">Reason for contact</label>
+            <select id="reason" name="reason" required class="w-full bg-[#0a192f] border border-[#233554] rounded p-2.5 text-sm text-[#e6f1ff] focus:outline-none focus:border-[#64ffda] transition-colors">
+              <option value="">Please choose one</option>
+              <option value="collaboration">Collaboration / software work</option>
+              <option value="opportunity">Job or internship opportunity</option>
+              <option value="other">Other enquiry</option>
+            </select>
+          </p>
+        </div>
+
+        <p class="m-0">
+          <label for="message" class="block text-xs font-mono text-[#64ffda] mb-1.5">Message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" class="w-full bg-[#0a192f] border border-[#233554] rounded p-2.5 text-sm text-[#e6f1ff] focus:outline-none focus:border-[#64ffda] transition-colors"></textarea>
+        </p>
+
+        <p class="text-center pt-2 m-0">
+          <button type="submit" class="w-full sm:w-auto px-8 py-3 bg-transparent border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-all cursor-pointer">Send message</button>
+        </p>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p><small>&copy; 2026 Tendai Mushayapokuvaka</small></p>
+  <footer class="text-center py-6 border-t border-[#233554]/40 font-mono text-xs text-[#8892b0]">
+    <p><small>&copy; 2026 Tendai Mushayapokuvaka. All rights reserved.</small></p>
   </footer>
-
-  <script>
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links-wrapper');
-
-    if (navToggle && navLinks) {
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        navLinks.classList.toggle('active');
-        document.body.classList.toggle('nav-open');
-      });
-
-      // Close mobile drawer when clicking a link
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navLinks.classList.remove('active');
-          document.body.classList.remove('nav-open');
-        });
-      });
-
-      // Close drawer when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navLinks.classList.remove('active');
-          document.body.classList.remove('nav-open');
-        }
-      });
-    }
-  </script>
 
 </body>
 </html>
