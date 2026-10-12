@@ -13,14 +13,23 @@
   <header>
     <nav aria-label="Primary navigation">
       <div class="logo"><a href="#">TM</a></div>
-      <ol>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ol>
-      <a href="mailto:mushayapokuvakat@africau.edu" class="button">Get in Touch</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="nav-toggle">
+        <span class="hamburger-box">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </span>
+      </button>
+      <div class="nav-links-wrapper" id="nav-links-wrapper">
+        <ol>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+        <a href="mailto:mushayapokuvakat@africau.edu" class="button nav-cta">Get in Touch</a>
+      </div>
     </nav>
   </header>
 
@@ -155,18 +164,18 @@
       </section>
     </article>
 
-    <section id="contact" aria-labelledby="contact-heading" style="text-align: center; max-width: 650px;">
+    <section id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading" class="numbered-heading">What's Next?</h2>
-      <h2 class="big-heading slate" style="font-size: clamp(30px, 5vw, 50px); margin-bottom: 20px;">Get In Touch</h2>
-      <p style="margin-bottom: 25px;">I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+      <h2 class="big-heading slate" style="font-size: clamp(28px, 5vw, 48px); margin-bottom: 18px;">Get In Touch</h2>
+      <p style="margin-bottom: 20px;">I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
 
-      <p style="margin-bottom: 30px;">
-        <a href="mailto:mushayapokuvakat@africau.edu" class="inline-link" style="font-family: var(--font-mono); font-size: var(--fz-md);">
+      <p style="margin-bottom: 25px;">
+        <a href="mailto:mushayapokuvakat@africau.edu" class="inline-link contact-email">
           mushayapokuvakat@africau.edu
         </a>
       </p>
 
-      <div style="margin-bottom: 45px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+      <div class="contact-buttons-wrapper">
         <a href="mailto:mushayapokuvakat@africau.edu" class="button big-button">Say Hello</a>
         <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="button big-button whatsapp-button">
           <svg class="whatsapp-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -176,10 +185,10 @@
         </a>
       </div>
 
-      <nav aria-label="Social and contact links">
-        <a href="https://github.com/mushayapokuvakat-ai" class="inline-link" style="margin: 0 12px;">GitHub</a>
-        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="inline-link" style="margin: 0 12px;">LinkedIn</a>
-        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="inline-link" style="margin: 0 12px;">WhatsApp (+263 787449535)</a>
+      <nav aria-label="Social and contact links" class="contact-social-links">
+        <a href="https://github.com/mushayapokuvakat-ai" class="inline-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="inline-link">LinkedIn</a>
+        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="inline-link">WhatsApp (+263 787449535)</a>
       </nav>
     </section>
   </main>
@@ -187,6 +196,38 @@
   <footer>
     <p><small>&copy; 2026 Tendai Mushayapokuvaka</small></p>
   </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links-wrapper');
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        navLinks.classList.toggle('active');
+        document.body.classList.toggle('nav-open');
+      });
+
+      // Close mobile drawer when clicking a link
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('active');
+          document.body.classList.remove('nav-open');
+        });
+      });
+
+      // Close drawer when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('active');
+          document.body.classList.remove('nav-open');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
