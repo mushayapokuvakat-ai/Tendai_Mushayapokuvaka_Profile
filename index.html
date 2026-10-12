@@ -3,138 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Tendai Mushayapokuvaka, a software engineering student at Africa University focused on backend development and AI integration.">
-  <title>Portfolio for Tendai Mushayapokuvaka | Software Engineer</title>
+  <meta name="description" content="Portfolio of Tendai Mushayapokuvaka, Software Engineer and Mathematics Tutor focused on full-stack systems, backend engineering, and AI integration.">
+  <title>Tendai Mushayapokuvaka | Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a href="#main-content">Skip to main content</a>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <header>
-     <img src="images/image.png" alt="Portrait photo of Tendai Mushayapokuvaka" width="150" height="150">
-    <h1>Tendai Mushayapokuvaka | Software Engineer</h1>
-    <p>Software engineering student currently studying at Africa University</p>
-
     <nav aria-label="Primary navigation">
-      <ul>
+      <div class="logo"><a href="#">TM</a></div>
+      <ol>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
-      </ul>
+      </ol>
+      <a href="mailto:mushayapokuvakat@africau.edu" class="button">Get in Touch</a>
     </nav>
   </header>
 
   <main id="main-content">
+    <section id="hero">
+      <img src="images/image.png" alt="Portrait photo of Tendai Mushayapokuvaka" class="profile-photo">
+      <p class="subtitle">Hi, my name is</p>
+      <h1 class="big-heading hero-name">Tendai Mushayapokuvaka.</h1>
+      <p>I'm a software engineering student at Africa University currently focused on backend development and AI integration. I enjoy building robust systems and intelligent applications.</p>
+      <div style="margin-top: 25px;">
+        <a href="#projects" class="button big-button">Check out my projects!</a>
+      </div>
+    </section>
+
     <article>
       <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a software engineering student at Africa University, building backend systems and AI-integrated tools. I've also led marketing for a legal aid company and now for my university's student group &mdash; experience that shaped how I communicate and solve problems, not just how I code.</p>
+        <h2 class="numbered-heading">About Me</h2>
+        <p>Software Engineer and Mathematics Tutor with 5+ years building clean, scalable solutions and making complex concepts click.</p>
+        
+        <p>I have spent half my career in classrooms and half in codebases:</p>
 
-        <aside aria-labelledby="focus-heading">
-          <h3 id="focus-heading">Current focus</h3>
-          <ul>
-            <li>Backend systems and databases</li>
-            <li>AI-enabled web applications</li>
-          </ul>
-        </aside>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3 class="subtitle">Engineering Side</h3>
+            <p>I design and ship full-stack applications using Python, JavaScript, React, Node.js, SQL, and Git. I’m strong in data structures &amp; algorithms, API design, cloud deployment (AWS), testing, and debugging performance bottlenecks.</p>
+          </div>
+
+          <div class="about-card">
+            <h3 class="subtitle">Tutoring Side</h3>
+            <p>2 years at a formal institution + 3 years freelance teaching General &amp; Pure Mathematics (ZIMSEC syllabus).</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 25px;">I'm currently pursuing my degree in Software Engineering at Africa University, building backend systems and AI-integrated tools. I've also led marketing for a legal aid company and now for my university's student group &mdash; experience that shaped how I communicate and solve problems, not just how I code.</p>
+
+        <p class="subtitle" style="margin-top: 30px; margin-bottom: 12px;">Current focus:</p>
+        <ul class="fancy-list">
+          <li>Backend systems &amp; databases</li>
+          <li>AI-enabled web applications</li>
+          <li>Scalable API architectures</li>
+          <li>Cloud deployments</li>
+        </ul>
       </section>
 
       <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>Mobile Application Development using Flutter</li>
-          <li>Web Development using HTML, CSS, and JavaScript</li>
-          <li>Backend Development using Django Rest Framework</li>
-          <li>Database Management using PostgreSQL</li>
-          <li>AI Integration using Python</li>
-        </ul>
+        <h2 class="numbered-heading">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">App Development</h3>
+            <ul class="fancy-list">
+              <li>Flutter</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Backend &amp; Database Design</h3>
+            <ul class="fancy-list">
+              <li>Django</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Web Development</h3>
+            <ul class="fancy-list">
+              <li>HTML &amp; CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>TailwindCSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Programming Languages</h3>
+            <ul class="fancy-list">
+              <li>Python</li>
+              <li>C#</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Selected Projects</h2>
+        <h2 id="projects-heading" class="numbered-heading">Selected Projects</h2>
 
-        <article>
+        <div class="project-card">
           <h3>Student Online Course Registration System</h3>
           <p>A system that enables students to register for courses electronically through a website or application.</p>
-          <p><a href="https://onlineregistration-2.onrender.com" target="_blank" rel="noopener">Visit the project</a></p>
-        </article>
+          <a href="https://onlineregistration-2.onrender.com" target="_blank" rel="noopener" class="inline-link">Visit the project</a>
+        </div>
 
-        <article>
+        <div class="project-card">
           <h3>Budget Tracker</h3>
           <p>A web application for tracking and managing a personal budget.</p>
-          <p><a href="https://budget-tracker-f.vercel.app/" target="_blank" rel="noopener">Visit the project</a></p>
-        </article>
+          <a href="https://budget-tracker-f.vercel.app/" target="_blank" rel="noopener" class="inline-link">Visit the project</a>
+        </div>
 
-        <article>
+        <div class="project-card">
           <h3>Code Health AI</h3>
           <p>A health-screening platform with an artificial-intelligence layer.</p>
-          <p><a href="https://code-health-ai-front-1u29.vercel.app/" target="_blank" rel="noopener">Visit the project</a></p>
-        </article>
+          <a href="https://code-health-ai-front-1u29.vercel.app/" target="_blank" rel="noopener" class="inline-link">Visit the project</a>
+        </div>
       </section>
 
       <section id="certifications" aria-labelledby="certifications-heading">
-        <h2 id="certifications-heading">Certifications and Training</h2>
-        <ul>
-          <li>Python Developer &ndash; freeCodeCamp (<time datetime="2026-06">June 2026</time>)</li>
-          <li>Meta Back-End Developer Certificate &ndash; Meta (<time datetime="2025-03">March 2025</time>)</li>
-          <li>Backend Development: Django REST Framework and PostgreSQL CODEALPHA (<time datetime="2026-06">June 2026</time>)</li>
-        </ul>
-      </section>
+        <h2 id="certifications-heading" class="numbered-heading">Certifications &amp; Education</h2>
+        <p class="subtitle" style="margin-bottom: 5px;">BSc Software Engineering</p>
+        <p>Africa University &ndash; current student</p>
+        
+        <p class="subtitle" style="margin-top: 20px; margin-bottom: 5px;">Advanced Level Mathematics</p>
+        <p>High distinction in Pure Mathematics and Statistics</p>
 
-      <section id="education" aria-labelledby="education-heading">
-        <h2 id="education-heading">Education</h2>
-        <p>BSc Software Engineering, Africa University &ndash; current student</p>
-        <p>Advanced Level Mathematics &ndash; high distinction in Pure Mathematics and Statistics</p>
+        <br>
+        <ul class="fancy-list certifications-list">
+          <li>
+            <a href="https://www.freecodecamp.org/certification/tendaijmushayapokuvaka13/python-v9" target="_blank" rel="noopener" class="inline-link">
+              Python Developer &ndash; freeCodeCamp
+            </a> (<time datetime="2026-06">June 2026</time>)
+          </li>
+          <li>
+            <a href="https://www.freecodecamp.org/certification/tendaijmushayapokuvaka13/foundational-c-sharp-with-microsoft" target="_blank" rel="noopener" class="inline-link">
+              Foundational C# with Microsoft &ndash; freeCodeCamp
+            </a>
+          </li>
+          <li>
+            Meta Back-End Developer Certificate &ndash; Meta (<time datetime="2025-03">March 2025</time>)
+          </li>
+          <li>
+            Backend Dev: Django REST &amp; PostgreSQL &ndash; CODEALPHA (<time datetime="2026-06">June 2026</time>)
+          </li>
+        </ul>
       </section>
     </article>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact information</h2>
+    <section id="contact" aria-labelledby="contact-heading" style="text-align: center; max-width: 650px;">
+      <h2 id="contact-heading" class="numbered-heading">What's Next?</h2>
+      <h2 class="big-heading slate" style="font-size: clamp(30px, 5vw, 50px); margin-bottom: 20px;">Get In Touch</h2>
+      <p style="margin-bottom: 25px;">I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+
+      <p style="margin-bottom: 30px;">
+        <a href="mailto:mushayapokuvakat@africau.edu" class="inline-link" style="font-family: var(--font-mono); font-size: var(--fz-md);">
+          mushayapokuvakat@africau.edu
+        </a>
+      </p>
+
+      <div style="margin-bottom: 45px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="mailto:mushayapokuvakat@africau.edu" class="button big-button">Say Hello</a>
+        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="button big-button whatsapp-button">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
 
       <nav aria-label="Social and contact links">
-        <a href="https://github.com/mushayapokuvakat-ai">GitHub</a>
-        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
-        <a href="mailto:mushayapokuvakat@africau.edu">Email</a>
+        <a href="https://github.com/mushayapokuvakat-ai" class="inline-link" style="margin: 0 12px;">GitHub</a>
+        <a href="https://www.linkedin.com/in/tendai-mushaya-bb5ba8383?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="inline-link" style="margin: 0 12px;">LinkedIn</a>
+        <a href="https://wa.me/263787449535" target="_blank" rel="noopener" class="inline-link" style="margin: 0 12px;">WhatsApp (+263 787449535)</a>
       </nav>
-
-      <h3>Send me a message</h3>
-      <form action="#" method="post">
-        <p>
-          <label for="name">Full name</label><br>
-          <input type="text" id="name" name="name" required minlength="2" autocomplete="name">
-        </p>
-
-        <p>
-          <label for="email">Email address</label><br>
-          <input type="email" id="email" name="email" required autocomplete="email">
-        </p>
-
-        <p>
-          <label for="phone">Phone number</label><br>
-          <input type="tel" id="phone" name="phone" pattern="[0-9+\s]{7,15}" placeholder="e.g. +263 77 123 4567" autocomplete="tel">
-        </p>
-
-        <p>
-          <label for="reason">Reason for contact</label><br>
-          <select id="reason" name="reason" required>
-            <option value="">Please choose one</option>
-            <option value="collaboration">Collaboration / software work</option>
-            <option value="opportunity">Job or internship opportunity</option>
-            <option value="other">Other enquiry</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
-        </p>
-
-        <p>
-          <button type="submit">Send message</button>
-        </p>
-      </form>
     </section>
   </main>
 
